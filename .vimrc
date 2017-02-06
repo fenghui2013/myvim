@@ -44,60 +44,60 @@ endfunction
 nmap qqq :call SessionSave()<CR>
 
 "======== bundle config========
-set nocompatible                " be iMproved
-filetype off                    " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-"my Bundle here:
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+Plugin 'fenghui2013/winmanager'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fatih/vim-go'
+" Plugin 'rkulla/pydiction'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+Plugin 'python.vim'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
-" original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle 'gg/python.vim'
-"Bundle 'kien/ctrlp.vim'
-"Bundle 'sukima/xmledit'
-"Bundle 'sjl/gundo.vim'
-"Bundle 'jiangmiao/auto-pairs'
-"Bundle 'klen/python-mode'
-"Bundle 'Valloric/ListToggle'
-"Bundle 'SirVer/ultisnips'
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-"Bundle 't9md/vim-quickhl'
-Bundle 'Lokaltog/vim-powerline'
-"Bundle 'scrooloose/nerdcommenter'
-"..................................
-" vim-scripts repos
-Bundle 'taglist.vim'
-Bundle 'Pydiction'
-"Bundle 'YankRing.vim'
-"Bundle 'vcscommand.vim'
-"Bundle 'ShowPairs'
-"Bundle 'SudoEdit.vim'
-"Bundle 'EasyGrep'
-"Bundle 'VOoM'
-"Bundle 'VimIM'
-"..................................
-" non github repos
-Bundle 'https://github.com/fenghui2013/winmanager.git'
-" Bundle 'git://git.wincent.com/command-t.git'
-"......................................
-filetype plugin indent on
-
-" plugin scrooloose/syntastic setting
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args="--ignore=E501,"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 "========winmanager config========
+" let g:winManagerWindowLayout="NERDTree|TagList"
+let g:winManagerWindowLayout="NERDTree"
+
+"========nerdtree config========
 let g:NERDTree_title="[NERDTree]"
-let g:winManagerWindowLayout="NERDTree|TagList"
 
 function! NERDTree_Start()
     exec 'NERDTree'
