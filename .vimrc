@@ -1,4 +1,6 @@
 "========common config========
+"语法高亮
+syntax enable
 "针对不同的文件类型采用不同的缩进格式
 filetype indent on
 "允许插件
@@ -48,7 +50,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
