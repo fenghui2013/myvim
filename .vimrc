@@ -64,6 +64,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'fenghui2013/winmanager'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
+Plugin 'chase/vim-ansible-yaml'
 " Plugin 'rkulla/pydiction'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -128,3 +129,5 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 "========Pydiction config========
 let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 let g:pydiction_menu_height = 7
+"========vim-ansible-yaml config========
+let g:ansible_options={'ignore_blank_lines':0}
